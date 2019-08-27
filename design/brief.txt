@@ -1,0 +1,14 @@
+La maquette n'a été créée que dans sa version Desktop, cependant la page doit être responsive (imaginons que le designer a été trop feignant pour la faire, ce sera donc à toi de proposer :-) ).
+
+Il y a plusieurs lames sur la maquette, chaque lame comporte du contenu. Le contenu doit apparaître au clic sur une lame entière. 
+Il s'agit d'un formulaire de contact. L'objectif étant de valider tes acquis tant au niveau front (intégration, animation etc..) qu'au niveau du back (récupération des champs, envoi d'un e-mail de "contact" récapitulant ce que l'utilisateur a entré). 
+
+A partir de cette page, il faudra : 
+- Intégrer le design 
+- Vérifier les champs du formulaire selon la saisie de l'internaute
+- Vérifier la soumission du formulaire (en PHP) 
+- Envoyer un mail suite à cette soumission de formulaire [L'email de "contact" ne nécessite pas forcément de design, juste la restitution des informations du formulaire]
+- Les animations / interactions peuvent être un +
+
+
+Polyfill / responsive
