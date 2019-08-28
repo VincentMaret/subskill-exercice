@@ -8,10 +8,9 @@ const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const es2015 = require('@babel/preset-env');
 
-const config = require('../conf');
+const config = require('../config');
 
-module.exports = () => {
-  console.log('start js task');
+const buildScripts = () => {
   return gulp.src(config.paths.scripts.src)
     .pipe(sourcemaps.init())
     .pipe(cache('js'))
@@ -21,3 +20,5 @@ module.exports = () => {
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(config.paths.output));
 }
+
+module.exports = buildScripts;

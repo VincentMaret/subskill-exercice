@@ -1,7 +1,4 @@
 module.exports = {
-  pages: [
-    'index'
-  ],
   paths: {
     output: './dist/',
     styles: {
@@ -10,10 +7,7 @@ module.exports = {
     },
     scripts: {
       src: './src/js/**/*.js',
-      name: 'main.min.js'
-    },
-    php: {
-      src: './src/php/'
+      name: 'script.min.js'
     }
   }
 }
