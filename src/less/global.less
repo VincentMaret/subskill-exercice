@@ -1,34 +1,16 @@
-@import 'var.less';
-
+@import 'config.less';
 html {
-  font-size: 20px;
-
   body {
     font-family: 'Roboto-Regular';
   }
-
-  @media screen and (max-width: @bpSm) {
-    font-size: 15px;
-  }
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-label {
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, label {
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-family: 'Gotham-Bold';
   font-size: @fontLg;
   max-width: 600px;
@@ -42,15 +24,13 @@ h4 {
   font-size: @fontXSm;
 }
 
-ul,
-ol {
+ul, ol {
   list-style-type: none;
 }
 
 a {
   color: @darkTxt;
   text-decoration: none;
-
   &:hover {
     text-decoration: none;
   }
@@ -60,10 +40,21 @@ button {
   font-family: 'Roboto-Regular' !important;
   outline: 0;
   border: none;
-
   &:focus {
     outline: 0;
   }
+}
+
+input {
+  outline: 0;
+  &:focus {
+    outline: 0;
+  }
+}
+
+input[type="submit"] {
+  background: none;
+  border: none;
 }
 
 .pink-txt {

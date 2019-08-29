@@ -1,91 +1,72 @@
-@import '../../var.less';
-
+@import '../../config.less';
 #Home .reconversion {
   h4 {
     font-family: 'Gotham-Bold';
   }
-
   .ac-q {
     background: url('assets/img/home/reconversion/header.png') no-repeat center;
   }
-
   .section-part {
     height: 300px;
-
     &.section-part-1 {
       height: auto;
       margin: 0 @spacing4;
       padding-bottom: @spacing2;
-
       &>* {
         max-width: 70%;
       }
-
       h3 {
         font-family: 'StaticBold';
         color: @orange;
       }
     }
-
     &.two-parts-row {
       &>div {
         display: flex;
         align-items: center;
       }
-
       &>div:first-child {
         position: relative;
         width: 33%;
         text-align: center;
         padding: 0 @spacing;
-
         &>div {
           margin: @spacing2 auto;
         }
       }
-
       &>div:last-child {
         flex: 1;
-
         p {
           margin: 0 @spacing4;
         }
       }
-
       // --------------------
       // alternate elements
       &:nth-child(even) {
         color: @lightTxt;
-
         &>div:first-child {
           background: @orangeDark;
         }
-
         &>div:last-child {
           background: @orangeLight;
         }
       }
-
       &:nth-child(odd) {
         &>div:first-child {
           color: @orange;
         }
       }
-
       // --------------------
     }
-
     .triangle {
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
     }
-
     .pic {
       margin-top: @spacing;
     }
-
     &.section-part-5 {
       a {
         font-size: @negFontSm;
@@ -99,39 +80,31 @@
         .push-animation(0.98);
       }
     }
-
     @media screen and (max-width: @bpSm) {
       height: auto;
       padding: @spacing2 0;
       position: relative;
-
       &.section-part-1 {
         padding: 0 0 @spacing2 0;
-
         &>* {
           max-width: none;
         }
       }
-
       &.two-parts-row {
         &>div:first-child {
           width: 100%;
           position: static;
         }
-
         &>div:last-child {
           text-align: center;
         }
-
         &:nth-child(even) {
           background: @orangeDark;
-
           &>div:last-child {
             background: @orangeDark;
           }
         }
       }
-
       &.section-part-5 {
         a {
           margin: @spacing4 auto 0 auto;

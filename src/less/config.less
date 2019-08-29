@@ -41,14 +41,35 @@
 @bpMd: 768px;
 @bpLg: 992px;
 @bpXl: 1200px;
-
 // ----------------------------------------------------
 // Animations mixins
 // ----------------------------------------------------
 .push-animation(@scale) {
   transition: all 0.5s;
-
   &:hover {
     transform: scale(@scale);
+  }
+}
+
+.regular-button(@color, @push-value, @width) {
+  font-size: @negFontSm;
+  background: @color;
+  color: @lightTxt;
+  padding: 10px 5px;
+  margin: @spacing4 0 0 auto;
+  display: block;
+  width: @width;
+  text-align: center;
+  .push-animation(@push-value);
+}
+
+// ----------------------------------------------------
+// Set main font-size
+// Use media queries to scale all rem values
+// ----------------------------------------------------
+html {
+  font-size: 20px;
+  @media screen and (max-width: @bpSm) {
+    font-size: 15px;
   }
 }

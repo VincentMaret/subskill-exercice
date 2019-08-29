@@ -1,74 +1,59 @@
-    @import '../../var.less';
-
+    @import '../../config.less';
     #Home .transition {
       h3 {
         font-family: 'StaticBold';
         margin-bottom: @spacing3;
       }
-
       img {
         object-fit: cover;
       }
-
       .ac-q {
         background: url('assets/img/home/transition/header.png') no-repeat center;
       }
-
       .section-part {
         margin-bottom: @spacing5;
-
         &:last-child {
           margin-bottom: 0;
         }
       }
-
       // ---------------------------------------------
       // Section part 1
       // ---------------------------------------------
       .section-part-1 {
         margin-left: @spacing4;
-
         &>* {
           width: 49%;
         }
-
         &>div>p:first-child {
           margin-bottom: @spacing3;
           font-size: @fontXSm;
           font-family: 'StaticBold';
         }
-
         @media screen and (max-width: @bpSm) {
           margin-right: @spacing4;
-
           &>* {
             width: 100%;
           }
         }
       }
-
       // ---------------------------------------------
       // Section part 2
       // ---------------------------------------------
       .section-part-2 {
         margin-left: @spacing4;
         margin-right: @spacing4;
-
         ul {
           li {
             width: 65%;
-
             &:first-child {
               width: 33%;
             }
           }
         }
-
         @media screen and (max-width: @bpSm) {
           ul {
             li {
               width: 100%;
-
               &:first-child {
                 width: 100%;
               }
@@ -76,71 +61,50 @@
           }
         }
       }
-
       // ---------------------------------------------
       // Section part 3
       // ---------------------------------------------
       .section-part-3 {
         margin-left: @spacing4;
         margin-right: @spacing4;
-
         h3 {
           max-width: 50%;
         }
-
         iframe {
           width: 70vw;
           height: 40vw;
         }
-
         @media screen and (max-width: @bpSm) {
           h3 {
             max-width: 100%;
           }
-
           iframe {
             width: 100vw;
             height: 57vw;
           }
         }
       }
-
       // ---------------------------------------------
       // Section part 4
       // ---------------------------------------------
       .section-part-4 {
         margin-right: @spacing4;
-
         img {
           width: 40%;
         }
-
         div {
           padding-left: @spacing3;
-
           a {
-            font-size: @negFontSm;
-            background: @pink;
-            color: @lightTxt;
-            padding: 10px 5px;
-            margin: @spacing4 0 0 auto;
-            display: block;
-            width: 6rem;
-            text-align: center;
-            .push-animation(0.98);
+            .regular-button(@pink, 0.98, 6rem);
           }
         }
-
         @media screen and (max-width: @bpSm) {
           margin-left: @spacing4;
-
           img {
             width: 100%;
           }
-
           div {
             padding-left: @spacing3;
-
             a {
               width: 50%;
             }

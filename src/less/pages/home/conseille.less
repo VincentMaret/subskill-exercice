@@ -1,32 +1,34 @@
-@import '../../var.less';
-
+@import '../../config.less';
 #Home .conseille {
+  // same value as accordion margin-top = 10px
+  padding-bottom: 10px;
   .ac-q {
     background: url('assets/img/home/conseille/header.png') no-repeat center;
   }
-
   .section-contents {
     padding-left: @spacing4;
     padding-right: @spacing4;
-
     h3 {
       font-family: 'StaticBold';
       max-width: 90%;
     }
-
     li {
       margin-top: @spacing4;
       max-width: 90%;
       display: flex;
     }
-
+    .link-txt:hover {
+      color: @yellow;
+    }
+    .form-part-title {
+      margin-bottom: @spacing;
+    }
     .cb-container {
       user-select: none;
-
+      margin-bottom: @spacing;
       label {
         position: relative;
         cursor: pointer;
-
         input {
           position: absolute;
           opacity: 0;
@@ -34,31 +36,73 @@
           width: 0;
           cursor: pointer;
         }
-
+        // all .fake-cb preceded by checked input
         input:checked~.fake-cb {
           background: @yellow;
         }
-
         .fake-cb {
           height: @fontXSm;
           width: @fontXSm;
           border: solid @yellow 1px;
         }
-
         &:hover {
           .fake-cb {
             background-color: @yellowLight;
           }
         }
-
         .label-txt {
-          margin-left: @spacing;
+          margin-left: @spacing2;
         }
-
-        .fake-cb,
-        .label-txt {
+        .fake-cb, .label-txt {
           display: inline-block;
           vertical-align: middle;
+        }
+      }
+    }
+    .form-info {
+      &>div:last-child {
+        flex: 1;
+      }
+      span, label {
+        display: block;
+      }
+      label {
+        margin-bottom: @spacing;
+      }
+      input {
+        width: 90%;
+        border: solid @yellow 1px;
+      }
+    }
+    .acceptation {
+      display: block;
+      p {
+        font-weight: 900;
+        border-bottom: solid @darkTxt 1px;
+        display: inline-block;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        .fake-cb {
+          min-width: @fontXSm;
+          min-height: @fontXSm;
+        }
+      }
+      input[type="submit"] {
+        .regular-button(@yellow, 0.98, 6rem);
+        @media screen and (max-width: @bpSm) {
+          width: 50%;
+        }
+      }
+    }
+    @media screen and (max-width: @bpSm) {
+      .link-txt {
+        color: @yellow;
+      }
+      .form-info {
+        input {
+          width: 100%;
         }
       }
     }

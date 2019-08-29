@@ -1,3 +1,11 @@
+html {
+  font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+}
 @font-face {
   font-family: 'StaticBold';
   src: url('assets/fonts/staticBold/StaticBold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/staticBold/StaticBold.otf') format('opentype'), url('assets/fonts/staticBold/StaticBold.woff') format('woff'), url('assets/fonts/staticBold/StaticBold.ttf') format('truetype'), url('assets/fonts/staticBold/StaticBold.svg#StaticBold') format('svg');
@@ -32,13 +40,13 @@
 html {
   font-size: 20px;
 }
-html body {
-  font-family: 'Roboto-Regular';
-}
 @media screen and (max-width: 576px) {
   html {
     font-size: 15px;
   }
+}
+html body {
+  font-family: 'Roboto-Regular';
 }
 body,
 h1,
@@ -85,10 +93,28 @@ button {
 button:focus {
   outline: 0;
 }
+input {
+  outline: 0;
+}
+input:focus {
+  outline: 0;
+}
+input[type="submit"] {
+  background: none;
+  border: none;
+}
 .pink-txt {
   color: #de216b;
 }
 
+html {
+  font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+}
 #Menu {
   position: fixed;
   z-index: 1000;
@@ -110,6 +136,17 @@ button:focus {
 }
 
 
+html {
+  font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+}
+#Home .conseille {
+  padding-bottom: 10px;
+}
 #Home .conseille .ac-q {
   background: url('assets/img/home/conseille/header.png') no-repeat center;
 }
@@ -126,8 +163,15 @@ button:focus {
   max-width: 90%;
   display: flex;
 }
+#Home .conseille .section-contents .link-txt:hover {
+  color: #ffb700;
+}
+#Home .conseille .section-contents .form-part-title {
+  margin-bottom: 10px;
+}
 #Home .conseille .section-contents .cb-container {
   user-select: none;
+  margin-bottom: 10px;
 }
 #Home .conseille .section-contents .cb-container label {
   position: relative;
@@ -152,14 +196,79 @@ button:focus {
   background-color: #ffe8af;
 }
 #Home .conseille .section-contents .cb-container label .label-txt {
-  margin-left: 10px;
+  margin-left: calc(10px * 2);
 }
 #Home .conseille .section-contents .cb-container label .fake-cb,
 #Home .conseille .section-contents .cb-container label .label-txt {
   display: inline-block;
   vertical-align: middle;
 }
+#Home .conseille .section-contents .form-info > div:last-child {
+  flex: 1;
+}
+#Home .conseille .section-contents .form-info span,
+#Home .conseille .section-contents .form-info label {
+  display: block;
+}
+#Home .conseille .section-contents .form-info label {
+  margin-bottom: 10px;
+}
+#Home .conseille .section-contents .form-info input {
+  width: 90%;
+  border: solid #ffb700 1px;
+}
+#Home .conseille .section-contents .acceptation {
+  display: block;
+}
+#Home .conseille .section-contents .acceptation p {
+  font-weight: 900;
+  border-bottom: solid black 1px;
+  display: inline-block;
+}
+#Home .conseille .section-contents .acceptation label {
+  display: flex;
+  align-items: center;
+}
+#Home .conseille .section-contents .acceptation label .fake-cb {
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+}
+#Home .conseille .section-contents .acceptation input[type="submit"] {
+  font-size: 0.7rem;
+  background: #ffb700;
+  color: white;
+  padding: 10px 5px;
+  margin: calc(10px * 4) 0 0 auto;
+  display: block;
+  width: 6rem;
+  text-align: center;
+  transition: all 0.5s;
+}
+#Home .conseille .section-contents .acceptation input[type="submit"]:hover {
+  transform: scale(0.98);
+}
+@media screen and (max-width: 576px) {
+  #Home .conseille .section-contents .acceptation input[type="submit"] {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  #Home .conseille .section-contents .link-txt {
+    color: #ffb700;
+  }
+  #Home .conseille .section-contents .form-info input {
+    width: 100%;
+  }
+}
 
+html {
+  font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+}
 #Home header {
   height: 100vh;
   width: 100%;
@@ -203,6 +312,14 @@ button:focus {
   padding-top: calc(10px * 2);
 }
 
+html {
+  font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+}
 #Home .reconversion h4 {
   font-family: 'Gotham-Bold';
 }
@@ -309,6 +426,14 @@ button:focus {
   }
 }
 
+html {
+  font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+}
 #Home .transition h3 {
   font-family: 'StaticBold';
   margin-bottom: calc(10px * 2);
@@ -417,6 +542,15 @@ button:focus {
   }
   #Home .transition .section-part-4 div a {
     width: 50%;
+  }
+}
+
+html {
+  font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 15px;
   }
 }
 
