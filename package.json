@@ -2,16 +2,15 @@
   "name": "subskill",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "less": "gulp buildStyles",
     "scripts": "gulp buildScripts",
-    "php": "gulp buildPhp",
     "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/VincentMaret/subskill-exercice"
   },
   "author": "Vincent Maret",
   "license": "ISC",

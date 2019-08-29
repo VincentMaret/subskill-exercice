@@ -16,6 +16,8 @@
 @orangeLight: #ff7e33;
 @orange: #f86c08;
 @orangeDark: #ff5e00;
+@yellow: #ffb700;
+@yellowLight: #ffe8af;
 // ----------------------------------------------------
 // spacing values
 // ----------------------------------------------------
@@ -39,12 +41,14 @@
 @bpMd: 768px;
 @bpLg: 992px;
 @bpXl: 1200px;
+
 // ----------------------------------------------------
-// Animations
+// Animations mixins
 // ----------------------------------------------------
-.push-animation {
+.push-animation(@scale) {
   transition: all 0.5s;
+
   &:hover {
-    transform: scale(0.98);
+    transform: scale(@scale);
   }
 }

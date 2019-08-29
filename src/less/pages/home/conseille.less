@@ -1,6 +1,66 @@
 @import '../../var.less';
+
 #Home .conseille {
   .ac-q {
     background: url('assets/img/home/conseille/header.png') no-repeat center;
+  }
+
+  .section-contents {
+    padding-left: @spacing4;
+    padding-right: @spacing4;
+
+    h3 {
+      font-family: 'StaticBold';
+      max-width: 90%;
+    }
+
+    li {
+      margin-top: @spacing4;
+      max-width: 90%;
+      display: flex;
+    }
+
+    .cb-container {
+      user-select: none;
+
+      label {
+        position: relative;
+        cursor: pointer;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          height: 0;
+          width: 0;
+          cursor: pointer;
+        }
+
+        input:checked~.fake-cb {
+          background: @yellow;
+        }
+
+        .fake-cb {
+          height: @fontXSm;
+          width: @fontXSm;
+          border: solid @yellow 1px;
+        }
+
+        &:hover {
+          .fake-cb {
+            background-color: @yellowLight;
+          }
+        }
+
+        .label-txt {
+          margin-left: @spacing;
+        }
+
+        .fake-cb,
+        .label-txt {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
   }
 }
