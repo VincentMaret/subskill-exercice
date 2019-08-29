@@ -1,0 +1,55 @@
+@import 'config.less';
+footer {
+  background: @black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: @spacing4;
+  .footer-part2 {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-links {
+    font-size: @negFontSm;
+    li {
+      margin: 0 @spacing;
+    }
+  }
+  .footer-logo {
+    img {
+      margin: 0 @spacing;
+    }
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  a {
+    color: @lightTxt;
+    &:hover {
+      color: @lightTxt;
+    }
+  }
+  @media screen and (max-width: @bpLg) {
+    flex-direction: column;
+    .footer-part2 {
+      width: 100%;
+      flex-direction: column;
+    }
+    .logo, .footer-links, .footer-logo {
+      margin-bottom: @spacing2;
+    }
+  }
+  @media screen and (max-width: @bpXSm) {
+    .footer-links {
+      flex-direction: column;
+      font-size: @fontXSm;
+      &>* {
+        margin: @spacing 0 !important;
+      }
+    }
+  }
+}

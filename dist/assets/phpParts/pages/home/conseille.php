@@ -191,3 +191,13 @@
     </ul>
   </form>
 </div>
+
+<div class="form-answer display-none">
+  <p>
+    MERCI D’AVOIR PRIS LE TEMPS DE
+    R&Eacute;PONDRE &Agrave; CES QUELQUES QUESTIONS.
+  </p>
+  <p>
+    UN DE NOS CONSEILLERS VOUS CONTACTERA DANS UN D&Eacute;LAI MAXIMUM DE 72 HEURES.
+  </p>
+</div>

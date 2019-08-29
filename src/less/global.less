@@ -13,7 +13,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, label {
 h1, h2 {
   font-family: 'Gotham-Bold';
   font-size: @fontLg;
-  max-width: 600px;
+  max-width: 30rem;
 }
 
 h3 {
@@ -33,6 +33,7 @@ a {
   text-decoration: none;
   &:hover {
     text-decoration: none;
+    color: @darkTxt;
   }
 }
 
@@ -59,4 +60,23 @@ input[type="submit"] {
 
 .pink-txt {
   color: @pink;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.company-logo {
+  position: relative;
+  margin-bottom: 20px;
+  h2 {
+    font-family: 'Gotham-Light';
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: @grey;
+  }
 }

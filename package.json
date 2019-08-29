@@ -6,7 +6,8 @@
   "scripts": {
     "less": "gulp buildStyles",
     "scripts": "gulp buildScripts",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",

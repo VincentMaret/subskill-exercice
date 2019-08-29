@@ -12,35 +12,39 @@
 // ----------------------------------------------------
 @lightTxt: white;
 @darkTxt: black;
+@black: black;
 @pink: #de216b;
 @orangeLight: #ff7e33;
 @orange: #f86c08;
 @orangeDark: #ff5e00;
 @yellow: #ffb700;
 @yellowLight: #ffe8af;
+@grey: rgb(184, 184, 184);
 // ----------------------------------------------------
 // spacing values
 // ----------------------------------------------------
-@spacing: 10px;
+@spacing: 0.5rem;
 @spacing2: calc(@spacing * 2);
 @spacing3: calc(@spacing * 2);
 @spacing4: calc(@spacing * 4);
 @spacing5: calc(@spacing * 5);
+@spacingNeg2: calc(@spacing / 2);
 // ----------------------------------------------------
 // Font size values
 // ----------------------------------------------------
 @fontXSm: 1.1rem;
 @fontSm: 1.3rem;
 @fontMd: 1.5rem;
-@fontLg: 2.3rem;
+@fontLg: 2.2rem;
 @negFontSm: 0.7rem;
 // ----------------------------------------------------
 // breakpoint values => bootsrap duplicate
 // ----------------------------------------------------
+@bpXSm: 450px;
 @bpSm: 576px;
 @bpMd: 768px;
 @bpLg: 992px;
-@bpXl: 1200px;
+@bpXl: 1500px;
 // ----------------------------------------------------
 // Animations mixins
 // ----------------------------------------------------
@@ -69,7 +73,13 @@
 // ----------------------------------------------------
 html {
   font-size: 20px;
+  @media screen and (min-width: @bpXl) {
+    font-size: 30px;
+  }
   @media screen and (max-width: @bpSm) {
     font-size: 15px;
+  }
+  @media screen and (max-width: @bpXSm) {
+    font-size: 13px;
   }
 }
