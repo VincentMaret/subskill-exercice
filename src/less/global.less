@@ -1,21 +1,41 @@
 @import 'var.less';
-body, h1, h2, h3, h4, h5, h6 {
+html {
+  font-size: 20px;
+  font-family: 'Roboto-Regular';
+  @media screen and (max-width: @bpSm) {
+    font-size: 15px;
+  }
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-size: 16px;
-  font-family: 'Roboto-Regular';
-}
-
 h1, h2 {
   font-family: 'Gotham-Bold';
-  font-size: 3rem;
+  font-size: @fontLg;
   max-width: 600px;
 }
 
+h3 {
+  font-size: @fontSm;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  color: @darkTxt;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 button {
+  font-family: 'Roboto-Regular' !important;
   outline: 0;
   border: none;
   &:focus {
@@ -23,6 +43,15 @@ button {
   }
 }
 
-p {
-  margin: 0;
+.pink-txt {
+  color: @pink;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
 }

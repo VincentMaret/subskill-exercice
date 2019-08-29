@@ -18,10 +18,15 @@
 <body id="Home">
 
   <?php
+    $homePath = 'assets/phpParts/pages/home/';
+
     include 'assets/phpParts/global/menu.php';
     include 'assets/phpParts/pages/home/header.php';
   ?>
 
+  <!------------------------------------
+    accordion skeleton
+  ------------------------------------->
   <div class="accordion-container">
     <section class="ac transition">
       <div class="ac-q" tabindex="0">
@@ -30,9 +35,7 @@
           PROFESSIONNELLE ?</h2>
       </div>
       <div class="ac-a">
-        <?php
-          include 'assets/phpParts/pages/home/transition.php';
-        ?>
+        <?php include $homePath.'transition.php'; ?>
       </div>
     </section>
 
@@ -42,7 +45,7 @@
           VOTRE PROJET DE RECONVERSION ?</h2>
       </div>
       <div class="ac-a">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis lacinia nibh.</p>
+        <?php include $homePath.'reconversion.php'; ?>
       </div>
     </section>
 
@@ -51,10 +54,11 @@
         <h2 class="ac-target">DISCUTER AVEC UN CONSEILLER</h2>
       </div>
       <div class="ac-a">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis lacinia nibh.</p>
+        <?php include $homePath.'conseille.php'; ?>
       </div>
     </section>
   </div>
+  <!----------------------------------->
 
   <?php
     include 'assets/phpParts/global/footer.php';

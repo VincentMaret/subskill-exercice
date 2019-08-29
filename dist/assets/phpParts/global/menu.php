@@ -5,8 +5,8 @@
     <i class="material-icons">
       reorder
     </i>
-    <p>
+    <h6>
       Menu
-    </p>
+    </h6>
   </button>
 </nav>

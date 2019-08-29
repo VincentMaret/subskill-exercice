@@ -3,4 +3,32 @@
   .ac-q {
     background: url('assets/img/home/reconversion/header.png') no-repeat center;
   }
+  .section-part {
+    div:first-child {
+      position: relative;
+      width: 33%;
+      text-align: center;
+    }
+    div:last-child {
+      width: 66%;
+    }
+    // --------------------
+    // alternate elements
+    &:nth-child(even) {
+      color: @lightTxt;
+      div:first-child {
+        background: @orangeDark;
+      }
+      div:last-child {
+        background: @orangeLight;
+      }
+    }
+    // --------------------
+    .triangle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
