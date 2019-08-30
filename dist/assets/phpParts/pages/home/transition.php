@@ -27,8 +27,8 @@
   </div>
 
   <div class="section-part section-part-2">
-    <h3 class="pink-txt">QUI PEUT EN BÉNÉFICIER ?</h3>
-    <ul class="d-flex flex-column flex-sm-row justify-content-between"">
+    <h3 class="pink-txt">QUI PEUT EN BÉNÉFICIER &nbsp;?</h3>
+    <ul class="d-flex flex-column flex-sm-row justify-content-start"">
       <li>
         <span class=" pink-txt">&#8226; Tout salarié en CDI</span> justifiant d’une ancienneté de 24 mois (consécutifs
       ou non)
@@ -49,7 +49,7 @@
   </div>
 
   <div class="section-part section-part-3">
-    <h3 class="pink-txt">LE CPF DE TRANSITION PROFESSIONNELLE, C’EST QUOI ?</h3>
+    <h3 class="pink-txt">LE CPF DE TRANSITION PROFESSIONNELLE, C’EST QUOI&nbsp;?</h3>
 
     <div class="d-flex justify-content-center">
       <iframe src="https://www.youtube.com/embed/qjsUSUdw6lk" frameborder="0"
@@ -71,7 +71,7 @@
         en partie maintenue.
       </p>
 
-      <a href="https://youtu.be/P701paKEMXs?list=LLMd8Lo2Mkhjjb6URrhDGSUA" target="_blank">
+      <a href="https://www.youtube.com/watch?v=P701paKEMXs" target="_blank">
         EN SAVOIR PLUS
       </a>
     </div>

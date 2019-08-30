@@ -29,7 +29,7 @@
   ------------------------------------->
   <div class="accordion-container">
     <section class="ac transition">
-      <div class="ac-q" tabindex="0">
+      <div id="FirstSlideBox" class="ac-q" tabindex="0">
         <h2 class="ac-target">QU’EST-CE QUE
           LE CPF DE TRANSITION
           PROFESSIONNELLE ?</h2>
@@ -40,9 +40,9 @@
     </section>
 
     <section class="ac reconversion">
-      <div class="ac-q" tabindex="0">
+      <div id="SecondSlideBox" class="ac-q" tabindex="0">
         <h2 class="ac-target">COMMENT R&Eacute;ALISER
-          VOTRE PROJET DE RECONVERSION ?</h2>
+          VOTRE PROJET DE RECONVERSION&nbsp;?</h2>
       </div>
       <div class="ac-a">
         <?php include $homePath.'reconversion.php'; ?>
@@ -50,7 +50,7 @@
     </section>
 
     <section class="ac conseille">
-      <div class="ac-q" tabindex="0">
+      <div id="ThirdSlideBox" class="ac-q" tabindex="0">
         <h2 class="ac-target">DISCUTER AVEC UN CONSEILLER</h2>
       </div>
       <div class="ac-a">

@@ -46,10 +46,14 @@ footer {
   @media screen and (max-width: @bpXSm) {
     .footer-links {
       flex-direction: column;
-      font-size: @fontXSm;
       &>* {
         margin: @spacing 0 !important;
       }
+    }
+  }
+  @media screen and (max-width: @bpSm) {
+    .footer-links {
+      font-size: @fontXSm;
     }
   }
 }

@@ -1,7 +1,16 @@
 'use strict';
 
+const app = app || {
+  common: {},
+  pages: {}
+};
+
 $(init);
 
 function init() {
-  const accordion = new Accordion('.accordion-container');
+  const pageId = $('body').attr('id');
+  const pageInstance = new app.pages[pageId]();
+
+  app.common.commonInit();
+  pageInstance.init();
 }

@@ -7,10 +7,33 @@
     background-size: cover;
     color: @lightTxt;
     text-align: center;
+    position: relative;
     span {
       font-family: 'Gotham-Light';
       display: block;
       margin: auto;
+    }
+    .scroll-button {
+      position: absolute;
+      bottom: 0;
+      a {
+        &:first-child {
+          display: inline-block;
+          color: @lightTxt;
+          padding: 0 70px;
+          background: @greyTransparent;
+          i {
+            transform: rotate(270deg);
+            font-size: 40px;
+          }
+        }
+        &:last-child {
+          width: 100vw;
+          height: 20px;
+          display: block;
+          background: @greyTransparent;
+        }
+      }
     }
   }
   // -----------------------

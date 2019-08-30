@@ -134,10 +134,14 @@ footer a:hover {
 @media screen and (max-width: 450px) {
   footer .footer-links {
     flex-direction: column;
-    font-size: 1.1rem;
   }
   footer .footer-links > * {
     margin: 0.5rem 0 !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  footer .footer-links {
+    font-size: 1.2rem;
   }
 }
 
@@ -161,6 +165,7 @@ html {
 }
 html body {
   font-family: 'Roboto-Regular';
+  overflow-x: hidden;
 }
 body,
 h1,
@@ -179,14 +184,14 @@ label {
 h1,
 h2 {
   font-family: 'Gotham-Bold';
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   max-width: 30rem;
 }
 h3 {
   font-size: 1.3rem;
 }
 h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 ul,
 ol {
@@ -281,6 +286,7 @@ html {
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 1000;
 }
 
 html {
@@ -317,9 +323,12 @@ html {
   max-width: 90%;
 }
 #Home .conseille .section-contents li {
-  margin-top: calc(0.5rem * 4);
+  margin-top: calc(0.5rem * 2);
   max-width: 90%;
   display: flex;
+}
+#Home .conseille .section-contents .link-txt {
+  white-space: nowrap;
 }
 #Home .conseille .section-contents .link-txt:hover {
   color: #ffb700;
@@ -346,8 +355,8 @@ html {
   background: #ffb700;
 }
 #Home .conseille .section-contents .cb-container label .fake-cb {
-  height: 1.1rem;
-  width: 1.1rem;
+  height: 1.2rem;
+  width: 1.2rem;
   border: solid #ffb700 1px;
 }
 #Home .conseille .section-contents .cb-container label:hover .fake-cb {
@@ -392,8 +401,8 @@ html {
   align-items: center;
 }
 #Home .conseille .section-contents .acceptation label .fake-cb {
-  min-width: 1.1rem;
-  min-height: 1.1rem;
+  min-width: 1.2rem;
+  min-height: 1.2rem;
 }
 #Home .conseille .section-contents .acceptation input[type="submit"] {
   font-size: 0.7rem;
@@ -465,11 +474,32 @@ html {
   background-size: cover;
   color: white;
   text-align: center;
+  position: relative;
 }
 #Home header span {
   font-family: 'Gotham-Light';
   display: block;
   margin: auto;
+}
+#Home header .scroll-button {
+  position: absolute;
+  bottom: 0;
+}
+#Home header .scroll-button a:first-child {
+  display: inline-block;
+  color: white;
+  padding: 0 70px;
+  background: rgba(93, 91, 91, 0.6);
+}
+#Home header .scroll-button a:first-child i {
+  transform: rotate(270deg);
+  font-size: 40px;
+}
+#Home header .scroll-button a:last-child {
+  width: 100vw;
+  height: 20px;
+  display: block;
+  background: rgba(93, 91, 91, 0.6);
 }
 #Home .ac {
   border: none;
@@ -528,7 +558,7 @@ html {
   background-size: cover;
 }
 #Home .reconversion .section-part {
-  height: 300px;
+  height: 18rem;
 }
 #Home .reconversion .section-part.section-part-1 {
   height: auto;
@@ -565,6 +595,11 @@ html {
 }
 #Home .reconversion .section-part.two-parts-row > div:last-child p {
   margin: 0 calc(0.5rem * 4);
+}
+@media screen and (max-width: 768px) {
+  #Home .reconversion .section-part.two-parts-row > div:last-child p {
+    margin: 0 0.5rem;
+  }
 }
 #Home .reconversion .section-part.two-parts-row:nth-child(even) {
   color: white;
@@ -675,7 +710,7 @@ html {
 }
 #Home .transition .section-part-1 > div > p:first-child {
   margin-bottom: calc(0.5rem * 2);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-family: 'StaticBold';
 }
 @media screen and (max-width: 576px) {
@@ -690,18 +725,25 @@ html {
   margin-left: calc(0.5rem * 4);
   margin-right: calc(0.5rem * 4);
 }
-#Home .transition .section-part-2 ul li {
-  width: 65%;
-}
 #Home .transition .section-part-2 ul li:first-child {
   width: 33%;
 }
-@media screen and (max-width: 576px) {
-  #Home .transition .section-part-2 ul li {
-    width: 100%;
+#Home .transition .section-part-2 ul li:last-child {
+  width: 55%;
+  margin-left: calc(0.5rem * 4);
+}
+@media screen and (max-width: 768px) {
+  #Home .transition .section-part-2 ul li:last-child {
+    margin-left: calc(0.5rem * 2);
   }
+}
+@media screen and (max-width: 576px) {
   #Home .transition .section-part-2 ul li:first-child {
     width: 100%;
+  }
+  #Home .transition .section-part-2 ul li:last-child {
+    width: 100%;
+    margin-left: 0;
   }
 }
 #Home .transition .section-part-3 {
@@ -715,10 +757,12 @@ html {
   width: 70vw;
   height: 40vw;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   #Home .transition .section-part-3 h3 {
     max-width: 100%;
   }
+}
+@media screen and (max-width: 576px) {
   #Home .transition .section-part-3 iframe {
     width: 100vw;
     height: 57vw;

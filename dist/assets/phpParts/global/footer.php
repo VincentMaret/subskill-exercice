@@ -24,31 +24,31 @@
 
     <ul class="footer-logo">
       <li>
-        <a href="#">
+        <a href="">
           <img src="assets/img/logo/sm/fb.png" alt="logo facebook">
         </a>
       </li>
 
       <li>
-        <a href="#">
+        <a href="">
           <img src="assets/img/logo/sm/twitter.png" alt="logo twitter">
         </a>
       </li>
 
       <li>
-        <a href="#">
+        <a href="">
           <img src="assets/img/logo/sm/yt.png" alt="logo youtube">
         </a>
       </li>
 
       <li>
-        <a href="#">
+        <a href="">
           <img src="assets/img/logo/sm/lkdin.png" alt="logo linkedin">
         </a>
       </li>
 
       <li>
-        <a href="#">
+        <a href="">
           <img src="assets/img/logo/sm/insta.png" alt="logo instagram">
         </a>
       </li>
