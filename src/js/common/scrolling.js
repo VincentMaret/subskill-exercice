@@ -1,6 +1,8 @@
+'use strict';
+
 app.common.scrolling = {
   // -----------------------------------------
-  setSmoothScrolling: () => {
+  setSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();

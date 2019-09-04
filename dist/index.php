@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="lib/accordion/accordion.min.css">
   <link rel="stylesheet" href="style.min.css">
 </head>
 
@@ -28,20 +27,20 @@
     accordion skeleton
   ------------------------------------->
   <div class="accordion-container">
-    <section class="ac transition">
-      <div id="FirstSlideBox" class="ac-q" tabindex="0">
-        <h2 class="ac-target">QU’EST-CE QUE
+    <section id="FirstSlideBox" class="ac transition">
+      <div class="ac-q" tabindex="0">
+        <h2>QU’EST-CE QUE
           LE CPF DE TRANSITION
-          PROFESSIONNELLE ?</h2>
+          PROFESSIONNELLE&nbsp;?</h2>
       </div>
       <div class="ac-a">
         <?php include $homePath.'transition.php'; ?>
       </div>
     </section>
 
-    <section class="ac reconversion">
-      <div id="SecondSlideBox" class="ac-q" tabindex="0">
-        <h2 class="ac-target">COMMENT R&Eacute;ALISER
+    <section id="SecondSlideBox" class="ac reconversion">
+      <div class="ac-q" tabindex="0">
+        <h2>COMMENT R&Eacute;ALISER
           VOTRE PROJET DE RECONVERSION&nbsp;?</h2>
       </div>
       <div class="ac-a">
@@ -49,9 +48,9 @@
       </div>
     </section>
 
-    <section class="ac conseille">
-      <div id="ThirdSlideBox" class="ac-q" tabindex="0">
-        <h2 class="ac-target">DISCUTER AVEC UN CONSEILLER</h2>
+    <section id="ThirdSlideBox" class="ac conseille">
+      <div class="ac-q" tabindex="0">
+        <h2>DISCUTER AVEC UN CONSEILLER</h2>
       </div>
       <div class="ac-a">
         <?php include $homePath.'conseille.php'; ?>
@@ -65,7 +64,6 @@
   ?>
 
   <script src="lib/jquery/jquery-3.4.1.min.js"></script>
-  <script src="lib/accordion/accordion.min.js"></script>
   <script src="script.min.js"></script>
 </body>
 
