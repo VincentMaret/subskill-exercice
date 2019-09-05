@@ -23,7 +23,8 @@
       </p>
     </div>
 
-    <img class="mt-4 mt-sm-0" src="assets/img/home/transition/section-1.png" alt="femme souriante sur son téléphone">
+    <img class="mt-4 mt-sm-0" src="assets/img/home/home-section-1/section-1.png"
+      alt="femme souriante sur son téléphone">
   </div>
 
   <div class="section-part section-part-2">
@@ -60,14 +61,14 @@
 
   <div class="section-part section-part-4 d-flex flex-column-reverse flex-sm-row justify-content-between">
 
-    <img class="mt-4 mt-sm-0" src="assets/img/home/transition/section-4.png" alt="">
+    <img class="mt-4 mt-sm-0" src="assets/img/home/home-section-1/section-4.png" alt="">
 
     <div>
       <h3 class="pink-txt">LE FINANCEMENT</h3>
       <p>
         La mobilisation des droits inscrits au Compte
-        Personnel de Formation (CPF) permet de contribuer au financement de la formation.Les frais pédagogiques et les
-        frais liés à la formation sont assurés par le Fongecif.Pendant la formation, la rémunération du salarié est
+        Personnel de Formation (CPF) permet de contribuer au financement de la formation. Les frais pédagogiques et les
+        frais liés à la formation sont assurés par le Fongecif. Pendant la formation, la rémunération du salarié est
         en partie maintenue.
       </p>
 

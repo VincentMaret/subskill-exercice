@@ -10,15 +10,15 @@
   <div class="footer-part2">
     <ul class="footer-links">
       <li>
-        <a href="#">Accueil</a>
+        <a href="">Accueil</a>
       </li>
 
       <li>
-        <a href="#">Contactez-nous</a>
+        <a href="">Contactez-nous</a>
       </li>
 
       <li>
-        <a href="#">Mentions légales</a>
+        <a href="">Mentions légales</a>
       </li>
     </ul>
 

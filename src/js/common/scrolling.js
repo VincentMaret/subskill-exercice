@@ -14,11 +14,11 @@ app.common.scrolling = {
     });
   },
   // -----------------------------------------
-  scrollTo(elId, delay) {
+  scrollTo(elId, time, delay) {
     setTimeout(() => {
       $([document.documentElement, document.body]).animate({
         scrollTop: $(`#${elId}`).offset().top
-      }, 500);
+      }, time);
     }, delay);
 
   }

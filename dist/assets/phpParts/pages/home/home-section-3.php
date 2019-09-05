@@ -1,3 +1,5 @@
+<?php include 'home-form.php'; ?>
+
 <div class="section-contents">
   <h3>
     VOUS SOUHAITEZ EN SAVOIR PLUS SUR LE CPF DE TRANSITION
@@ -6,9 +8,9 @@
     LAISSEZ-NOUS VOUS CONTACTER.
   </h3>
 
-  <form action="" method="post">
+  <form id="HomeForm" action="assets/phpParts/global/form-validator.php" method="post" target="_blank">
     <ul>
-      <li>
+      <li id="Q1Container">
         <div>1.&nbsp;</div>
         <div>
           <P class="form-part-title">
@@ -16,128 +18,97 @@
             <a class="link-txt" href="http://www.fongecif-idf.fr" target="_blank">www.fongecif-idf.fr</a>&nbsp;?
           </P>
 
-          <div class="cb-container">
-            <label>
-              <input type="radio" name="q1" value="Oui">
-              <span class="fake-cb"></span>
-              <span class="label-txt">Oui</span>
-            </label>
-          </div>
+          <p class="error-message"></p>
 
+          <?php
+            foreach($homeFdConfig['checkBoxValues']['Q1'] as $val){
+              ?>
           <div class="cb-container">
             <label>
-              <input type="radio" name="q1" value="Non">
+              <input type="radio" name="Q1" value="<?php echo $val; ?>">
               <span class="fake-cb"></span>
-              <span class="label-txt">Non</span>
+              <span class="label-txt"><?php echo $val; ?></span>
             </label>
           </div>
+          <?php
+            }
+          ?>
         </div>
       </li>
 
-      <li>
+      <li id="Q2Container">
         <div>2.&nbsp;</div>
         <div>
           <P class="form-part-title">
             Vous êtes en :
           </P>
 
-          <div class="cb-container">
-            <label>
-              <input type="radio" name="q2" value="CDI">
-              <span class="fake-cb"></span>
-              <span class="label-txt">CDI</span>
-            </label>
-          </div>
+          <p class="error-message"></p>
 
+          <?php
+            foreach($homeFdConfig['checkBoxValues']['Q2'] as $val){
+              ?>
           <div class="cb-container">
             <label>
-              <input type="radio" name="q2" value="CDD">
+              <input type="radio" name="Q2" value="<?php echo $val; ?>">
               <span class="fake-cb"></span>
-              <span class="label-txt">CDD</span>
+              <span class="label-txt"><?php echo $val; ?></span>
             </label>
           </div>
+          <?php
+            }
+          ?>
 
-          <div class="cb-container">
-            <label>
-              <input type="radio" name="q2" value="Autre">
-              <span class="fake-cb"></span>
-              <span class="label-txt">Autre</span>
-            </label>
-          </div>
         </div>
       </li>
 
-      <li>
+      <li id="Q3Container">
         <div>3.&nbsp;</div>
         <div>
           <P class="form-part-title">
             Vous avez un projet de reconversion professionnelle :
           </P>
 
-          <div class="cb-container">
-            <label>
-              <input type="radio" name="q3" value="A court terme">
-              <span class="fake-cb"></span>
-              <span class="label-txt">&Agrave; court terme</span>
-            </label>
-          </div>
+          <p class="error-message"></p>
 
+          <?php
+            foreach($homeFdConfig['checkBoxValues']['Q3'] as $val){
+              ?>
           <div class="cb-container">
             <label>
-              <input type="radio" name="q3" value="A moyen terme">
+              <input type="radio" name="Q3" value="<?php echo $val; ?>">
               <span class="fake-cb"></span>
-              <span class="label-txt">&Agrave; moyen terme</span>
+              <span class="label-txt"><?php echo $val; ?></span>
             </label>
           </div>
-
-          <div class="cb-container">
-            <label>
-              <input type="radio" name="q3" value="A long terme">
-              <span class="fake-cb"></span>
-              <span class="label-txt">&Agrave; long terme</span>
-            </label>
-          </div>
+          <?php
+            }
+          ?>
         </div>
       </li>
 
-      <li>
+      <li id="Q4Container">
         <div>4.&nbsp;</div>
         <div>
           <P class="form-part-title">
             &Agrave; quel moment de la journée souhaitez-vous être appelé ?
           </P>
 
-          <div class="cb-container">
-            <label>
-              <input type="checkbox" name="q4" value="Entre 9h et 12h">
-              <span class="fake-cb"></span>
-              <span class="label-txt">Entre 9h et 12h</span>
-            </label>
-          </div>
+          <p class="error-message"></p>
 
+          <?php
+            foreach($homeFdConfig['checkBoxValues']['Q4'] as $val){
+              ?>
           <div class="cb-container">
             <label>
-              <input type="checkbox" name="q4" value="Entre 12h et 14h">
+              <input type="checkbox" name="Q4" value="<?php echo $val; ?>">
               <span class="fake-cb"></span>
-              <span class="label-txt">Entre 12h et 14h</span>
+              <span class="label-txt"><?php echo $val; ?></span>
             </label>
           </div>
-
-          <div class="cb-container">
-            <label>
-              <input type="checkbox" name="q4" value="Entre 14h et 16h">
-              <span class="fake-cb"></span>
-              <span class="label-txt">Entre 14h et 16h</span>
-            </label>
-          </div>
-
-          <div class="cb-container">
-            <label>
-              <input type="checkbox" name="q4" value="Entre 16h et 18h">
-              <span class="fake-cb"></span>
-              <span class="label-txt">Entre 16h et 18h</span>
-            </label>
-          </div>
+          <?php
+            }
+          ?>
         </div>
       </li>
 
@@ -148,36 +119,43 @@
             Vos informations
           </P>
 
-          <label>
+          <label id="LastNameContainer">
             <span>Nom</span>
+            <p class="error-message"></p>
             <input type="text" name="LastName">
           </label>
 
-          <label>
+          <label id="FirstNameContainer">
             <span>Prénom</span>
+            <p class="error-message"></p>
             <input type="text" name="FirstName">
           </label>
 
-          <label>
+          <label id="PhoneContainer">
             <span>Numéro de téléphone</span>
+            <p class="error-message"></p>
             <input type="text" name="Phone">
           </label>
 
-          <label>
+          <label id="MailContainer">
             <span>Adresse email</span>
+            <p class="error-message"></p>
             <input type="text" name="Mail">
           </label>
         </div>
       </li>
 
-      <li class="acceptation">
+      <li id="AcceptationContainer" class="acceptation">
         <P class="form-part-title">
           Que faites-vous de mes données&nbsp;?
         </P>
 
+        <p class="error-message"></p>
+
         <div class="cb-container">
           <label>
-            <input type="checkbox" name="acceptation">
+            <input type="checkbox" name="Acceptation"
+              value="<?php echo $homeFdConfig['checkBoxValues']['Acceptation'][0]; ?>">
             <span class="fake-cb"></span>
             <span class="label-txt">
               En soumettant ce formulaire, j’accepte que les informations saisies soient
@@ -186,7 +164,7 @@
           </label>
         </div>
 
-        <input type="submit" value="ENVOYER">
+        <input id="HomeSubmit" type="submit" value="ENVOYER">
       </li>
     </ul>
   </form>

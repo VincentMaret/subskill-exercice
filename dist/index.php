@@ -27,33 +27,33 @@
     accordion skeleton
   ------------------------------------->
   <div class="accordion-container">
-    <section id="FirstSlideBox" class="ac transition">
+    <section id="FirstSlideBox" class="ac home-section-1">
       <div class="ac-q" tabindex="0">
         <h2>QU’EST-CE QUE
           LE CPF DE TRANSITION
           PROFESSIONNELLE&nbsp;?</h2>
       </div>
       <div class="ac-a">
-        <?php include $homePath.'transition.php'; ?>
+        <?php include $homePath.'home-section-1.php'; ?>
       </div>
     </section>
 
-    <section id="SecondSlideBox" class="ac reconversion">
+    <section id="SecondSlideBox" class="ac home-section-2">
       <div class="ac-q" tabindex="0">
         <h2>COMMENT R&Eacute;ALISER
           VOTRE PROJET DE RECONVERSION&nbsp;?</h2>
       </div>
       <div class="ac-a">
-        <?php include $homePath.'reconversion.php'; ?>
+        <?php include $homePath.'home-section-2.php'; ?>
       </div>
     </section>
 
-    <section id="ThirdSlideBox" class="ac conseille">
+    <section id="ThirdSlideBox" class="ac home-section-3">
       <div class="ac-q" tabindex="0">
         <h2>DISCUTER AVEC UN CONSEILLER</h2>
       </div>
       <div class="ac-a">
-        <?php include $homePath.'conseille.php'; ?>
+        <?php include $homePath.'home-section-3.php'; ?>
       </div>
     </section>
   </div>

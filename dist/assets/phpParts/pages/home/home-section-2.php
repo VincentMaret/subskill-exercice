@@ -15,7 +15,7 @@
     <div>
       <div>
         <h4>1<br>NOUS VOUS CONTACTONS</h4>
-        <img class="pic" src="assets/img/home/reconversion/phone.png" alt="">
+        <img class="pic" src="assets/img/home/home-section-2/phone.png" alt="">
       </div>
     </div>
 
@@ -32,9 +32,9 @@
 
     <div>
       <div>
-        <img class="triangle" src="assets/img/home/reconversion/triangle-o.png" alt="triangle">
+        <img class="triangle" src="assets/img/home/home-section-2/triangle-o.png" alt="triangle">
         <h4>2<br>JE RENCONTRE MON CONSEILLER</h4>
-        <img class="pic" src="assets/img/home/reconversion/question.png" alt="">
+        <img class="pic" src="assets/img/home/home-section-2/question.png" alt="">
       </div>
     </div>
 
@@ -54,9 +54,9 @@
 
     <div>
       <div>
-        <img class="triangle" src="assets/img/home/reconversion/triangle-w.png" alt="triangle">
+        <img class="triangle" src="assets/img/home/home-section-2/triangle-w.png" alt="triangle">
         <h4>3<br>NOUS ÉLABORONS UN PLAN D’ACTIONS</h4>
-        <img class="pic" src="assets/img/home/reconversion/feuille.png" alt="">
+        <img class="pic" src="assets/img/home/home-section-2/feuille.png" alt="">
       </div>
     </div>
 
@@ -75,9 +75,9 @@
 
     <div>
       <div>
-        <img class="triangle" src="assets/img/home/reconversion/triangle-o.png" alt="triangle">
+        <img class="triangle" src="assets/img/home/home-section-2/triangle-o.png" alt="triangle">
         <h4>4<br>VOTRE PROJET EST FORMALIS&Eacute;</h4>
-        <img class="pic" src="assets/img/home/reconversion/main.png" alt="">
+        <img class="pic" src="assets/img/home/home-section-2/main.png" alt="">
       </div>
     </div>
 
