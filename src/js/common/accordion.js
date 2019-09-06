@@ -47,9 +47,12 @@ app.common.Accordion = class {
   }
 
   refreshOpenedFrame() {
-    const autoHeight = this.openedFrame.css('height', 'auto').height();
-    this.openedFrame.animate({
-      height: autoHeight
-    }, 0);
+
+    if (this.openedFrame) {
+      const autoHeight = this.openedFrame.css('height', 'auto').height();
+      this.openedFrame.animate({
+        height: autoHeight
+      }, 0);
+    }
   }
 }
