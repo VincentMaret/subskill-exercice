@@ -163,9 +163,11 @@ app.common.FormManager = class {
       .then(data => {
         console.log(data);
         if (data === 'mail sent') {
+          $('#ThirdSlideBox .section-contents').css('display', 'none');
           $('#Home .home-section-3 .form-answer').css('display', 'block');
+          app.pageInstance.accordion.refreshOpenedFrame();
         } else {
-          console.log('no mail sent')
+          console.log('no mail sent');
         }
       });
   }
