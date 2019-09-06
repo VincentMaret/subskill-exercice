@@ -15,7 +15,7 @@ const buildScripts = () => {
     .pipe(cache('js'))
     .pipe(concat(config.paths.scripts.name))
     .pipe(babel({
-      presets: ['@babel/env']
+      presets: ['@babel/preset-env']
     }))
     .pipe(uglify())
     .pipe(sourcemaps.write('maps'))

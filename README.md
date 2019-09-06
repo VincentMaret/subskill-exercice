@@ -28,5 +28,6 @@ src/less.config.less
 ```
 dist/assets/phpParts/pages/home/home-form.php
 ```
+Change home form receiver and sender here.
 
 
