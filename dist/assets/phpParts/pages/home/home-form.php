@@ -18,6 +18,7 @@ $homeFdConfig = [
     'Q4' => [ 'Entre 9h et 12h', 'Entre 12h et 14h', 'Entre 14h et 16h', 'Entre 16h et 18h' ],
     'Acceptation' => ['true']
   ],
+  'checkBoxMultipleValues' => ['Q4'],
   'formSettings' => [
     'receiver' => 'receiver@gmail.com',
     'from' => 'from@yopmail.com'

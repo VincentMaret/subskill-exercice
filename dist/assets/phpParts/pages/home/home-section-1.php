@@ -53,7 +53,7 @@
     <h3 class="pink-txt">LE CPF DE TRANSITION PROFESSIONNELLE, C’EST QUOI&nbsp;?</h3>
 
     <div class="d-flex justify-content-center">
-      <iframe src="https://www.youtube.com/embed/qjsUSUdw6lk" frameborder="0"
+      <iframe title="Le CPF c'est quoi?" src="https://www.youtube.com/embed/qjsUSUdw6lk" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
@@ -72,7 +72,7 @@
         en partie maintenue.
       </p>
 
-      <a href="https://www.youtube.com/watch?v=P701paKEMXs" target="_blank">
+      <a href="" target="_blank">
         EN SAVOIR PLUS
       </a>
     </div>

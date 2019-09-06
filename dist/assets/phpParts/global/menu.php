@@ -1,10 +1,5 @@
 <div class="company-logo logo-menu">
-  <img src="assets/img/logo.png" alt="">
-  <h2>
-    Pafoux
-    <br>
-    Industry
-  </h2>
+  <img src="assets/img/logo.png" alt="Company logo">
 </div>
 
 <nav id="Menu" class="d-flex justify-content-between">

@@ -1,11 +1,6 @@
 <footer>
   <div class="company-logo">
-    <img src="assets/img/logo.png" alt="">
-    <h2>
-      Pafoux
-      <br>
-      Industry
-    </h2>
+    <img src="assets/img/logo.png" alt="Company logo">
   </div>
   <div class="footer-part2">
     <ul class="footer-links">
@@ -24,31 +19,31 @@
 
     <ul class="footer-logo">
       <li>
-        <a href="">
+        <a href="" aria-label="Facebook">
           <img src="assets/img/logo/sm/fb.png" alt="logo facebook">
         </a>
       </li>
 
       <li>
-        <a href="">
+        <a href="" aria-label="Twitter">
           <img src="assets/img/logo/sm/twitter.png" alt="logo twitter">
         </a>
       </li>
 
       <li>
-        <a href="">
+        <a href="" aria-label="Youtube">
           <img src="assets/img/logo/sm/yt.png" alt="logo youtube">
         </a>
       </li>
 
       <li>
-        <a href="">
+        <a href="" aria-label="Linkedin">
           <img src="assets/img/logo/sm/lkdin.png" alt="logo linkedin">
         </a>
       </li>
 
       <li>
-        <a href="">
+        <a href="" aria-label="Instargam">
           <img src="assets/img/logo/sm/insta.png" alt="logo instagram">
         </a>
       </li>

@@ -12,6 +12,7 @@ app.common.Accordion = class {
   }
   setEvents() {
     $('.ac-q').on('click', this.accordionAnnimation.bind(this));
+    $(window).on('resize', this.refreshOpenedFrame.bind(this));
   }
   accordionAnnimation(e) {
     $('.ac-q').off('click');
@@ -43,5 +44,12 @@ app.common.Accordion = class {
     }, this.animationTime);
     this.lastClosedFrameParentId = this.openedFrame.parent().attr('id');;
     this.openedFrame = undefined;
+  }
+
+  refreshOpenedFrame() {
+    const autoHeight = this.openedFrame.css('height', 'auto').height();
+    this.openedFrame.animate({
+      height: autoHeight
+    }, 0);
   }
 }

@@ -15,7 +15,8 @@
         <div>
           <P class="form-part-title">
             Avez-vous déjà contacté le Fongecif Île-de-France et/ou avez-vous déjà créé votre espace personnel sur
-            <a class="link-txt" href="http://www.fongecif-idf.fr" target="_blank">www.fongecif-idf.fr</a>&nbsp;?
+            <a class="link-txt" href="http://www.fongecif-idf.fr" rel="noopener"
+              target="_blank">www.fongecif-idf.fr</a>&nbsp;?
           </P>
 
           <p class="error-message"></p>
@@ -91,7 +92,7 @@
         <div>4.&nbsp;</div>
         <div>
           <P class="form-part-title">
-            &Agrave; quel moment de la journée souhaitez-vous être appelé ?
+            &Agrave; quel moment de la journée souhaitez-vous être appelé&nbsp;?
           </P>
 
           <p class="error-message"></p>
@@ -170,7 +171,7 @@
   </form>
 </div>
 
-<div class="form-answer display-none">
+<div class="form-answer">
   <p>
     MERCI D’AVOIR PRIS LE TEMPS DE
     R&Eacute;PONDRE &Agrave; CES QUELQUES QUESTIONS.

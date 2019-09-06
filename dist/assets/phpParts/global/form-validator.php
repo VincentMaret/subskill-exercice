@@ -38,11 +38,26 @@
 
       // check checkbox intergrity
       if(array_key_exists($key, $formConfig['checkBoxValues'])){
-        // if checkbox value don't exist in config
-        if(!in_array($val, $formConfig['checkBoxValues'][$key])){
-          echo 'Hack attempt on '. $key .' checkbox value';
-        return false;
+        
+        // if we need to split values
+        if(in_array($key, $formConfig['checkBoxMultipleValues'])){
+          $valArray = preg_split('/,/', $val);
+   
+          foreach($valArray as $x){
+             // if checkbox value don't exist in config
+            if(!in_array($x, $formConfig['checkBoxValues'][$key])){
+              echo 'Hack attempt on '. $key .' checkbox value';
+              return false;
+            }
+          }
+        } else{
+          // if checkbox value don't exist in config
+          if(!in_array($val, $formConfig['checkBoxValues'][$key])){
+            echo 'Hack attempt on '. $key .' checkbox value';
+            return false;
+          }
         }
+        
       }
   
       // supress tags
@@ -53,7 +68,6 @@
   }
 
   function validateData($formData){
-    var_dump($formData);
     $regex = [
       'names' => "/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/",
       'phone' => "/((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))/",
@@ -113,5 +127,6 @@
     $headers[] = 'To: CPF mail <'.$settings['receiver'].'>';
 
     mail($settings['receiver'], 'CPF inscription', $message, implode("\r\n", $headers));
+    echo 'mail sent';
   }
 ?>

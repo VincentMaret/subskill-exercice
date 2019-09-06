@@ -88,7 +88,7 @@
           professionnel vous est remis à chaque étape. Vous êtes prêt à vous lancer !
         </p>
 
-        <a href="https://www.youtube.com/watch?v=-ht9O-z52Pg" target="_blank">
+        <a href="" aria-label="En savoir plus" target="_blank">
           EN SAVOIR PLUS
         </a>
       </div>

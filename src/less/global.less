@@ -15,6 +15,9 @@ h1, h2 {
   font-family: 'Gotham-Bold';
   font-size: @fontLg;
   max-width: 30rem;
+  @media screen and (max-width: @bpXSm) {
+    font-size: @fontMd2;
+  }
 }
 
 h3 {
@@ -23,6 +26,9 @@ h3 {
 
 h4 {
   font-size: @fontXSm;
+  @media screen and (max-width: @bpLg) {
+    font-size: 1rem;
+  }
 }
 
 ul, ol {
@@ -65,19 +71,4 @@ input[type="submit"] {
 
 .display-none {
   display: none !important;
-}
-
-.company-logo {
-  position: relative;
-  margin-bottom: 20px;
-  h2 {
-    font-family: 'Gotham-Light';
-    font-size: 20px;
-    text-align: center;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: @grey;
-  }
 }

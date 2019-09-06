@@ -6,11 +6,11 @@
   </h1>
 
   <div class="scroll-button">
-    <a href="#FirstSlideBox">
+    <a href="#FirstSlideBox" aria-label="First slide">
       <i class="material-icons">
         arrow_back_ios
       </i>
     </a>
-    <a href="#FirstSlideBox"></a>
+    <a href="#FirstSlideBox" aria-label="First slide"></a>
   </div>
 </header>

@@ -19,15 +19,13 @@ app.common.FormManager = class {
   formValidator() {
     this.getFormData();
 
-    // const hasError = this.checkFormData();
-    // if (!hasError) {
-    //  $(this.formId).submit();
-    // }
-    //$(this.formId).submit();
-    this.sendData();
+    const hasError = this.checkFormData();
+    if (!hasError) {
+      this.sendData();
+    }
   }
   getFormData() {
-    const formData = $('#HomeForm').serializeArray();
+    const formData = $(this.formId).serializeArray();
 
     // reset Q4 array
     this.formData.Q4 = [];
@@ -88,6 +86,9 @@ app.common.FormManager = class {
 
     });
 
+    // refresh opened frame height
+    app.pageInstance.accordion.refreshOpenedFrame();
+
     return errorChecker;
   }
 
@@ -103,14 +104,14 @@ app.common.FormManager = class {
   unsetError(messageIndex, type) {
     // write empty message
     $(`#${messageIndex}Container .error-message`).html('');
+    // refresh opened frame height
+    app.pageInstance.accordion.refreshOpenedFrame();
     // unset event
     $(`input[name=${messageIndex}]`).off(type);
   }
 
   checkInputData(e, messageIndex) {
     const targetValue = $(e.target).val();
-    console.log('------------------')
-    console.log(targetValue)
     // if txt box message
     if (e.type === 'keyup') {
 
@@ -147,7 +148,6 @@ app.common.FormManager = class {
   }
 
   sendData() {
-    console.log('send it')
     const fd = new FormData();
 
     $.each(this.formData, (i, x) => {
@@ -159,6 +159,15 @@ app.common.FormManager = class {
       body: fd
     }
     const sendRes = fetch(this.url, options);
+    sendRes.then(res => res.text())
+      .then(data => {
+        console.log(data);
+        if (data === 'mail sent') {
+          $('#Home .home-section-3 .form-answer').css('display', 'block');
+        } else {
+          console.log('no mail sent')
+        }
+      });
   }
 
 }

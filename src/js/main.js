@@ -9,8 +9,8 @@ $(init);
 
 function init() {
   const pageId = $('body').attr('id');
-  const pageInstance = new app.pages[pageId]();
+  app.pageInstance = new app.pages[pageId]();
 
   app.common.commonInit();
-  pageInstance.init();
+  app.pageInstance.init();
 }
