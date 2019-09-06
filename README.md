@@ -19,7 +19,7 @@ npm run dev
 
 ### Path to config.less
 ```
-src/less.config.less
+src/less/config.less
 ```
 
 # Change home form settings
