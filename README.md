@@ -15,14 +15,14 @@ npm run build
 npm run dev
 ```
 
-# Change design configuration
+# Design configuration
 
 ### Path to config.less
 ```
 src/less/config.less
 ```
 
-# Change home form settings
+# Home form settings
 
 ### Path to home-form.php
 ```
