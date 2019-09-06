@@ -50,6 +50,23 @@
 @bpLg2: 1200px;
 @bpXl: 1500px;
 // ----------------------------------------------------
+// Set main font-size
+// Use media queries to scale all rem values
+// ----------------------------------------------------
+html {
+  font-size: 25px;
+  @media screen and (min-width: @bpXl) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: @bpSm) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: @bpXSm) {
+    font-size: 13px;
+  }
+}
+
+// ----------------------------------------------------
 // Animations mixins
 // ----------------------------------------------------
 .push-animation(@scale) {
@@ -69,21 +86,4 @@
   width: @width;
   text-align: center;
   .push-animation(@push-value);
-}
-
-// ----------------------------------------------------
-// Set main font-size
-// Use media queries to scale all rem values
-// ----------------------------------------------------
-html {
-  font-size: 25px;
-  @media screen and (min-width: @bpXl) {
-    font-size: 30px;
-  }
-  @media screen and (max-width: @bpSm) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: @bpXSm) {
-    font-size: 13px;
-  }
 }

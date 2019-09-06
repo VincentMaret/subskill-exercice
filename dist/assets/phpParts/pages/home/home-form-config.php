@@ -20,10 +20,9 @@ $homeFdConfig = [
   ],
   'checkBoxMultipleValues' => ['Q4'],
   'formSettings' => [
-    'receiver' => 'receiver@gmail.com',
+    'receiver' => 'receiver@yopmail.com',
     'from' => 'from@yopmail.com'
   ]
-  
 ];
 
 ?>

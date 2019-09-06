@@ -126,7 +126,7 @@
     $headers[] = 'From: CPF website <'.$settings['from'].'>';
     $headers[] = 'To: CPF mail <'.$settings['receiver'].'>';
 
-    mail($settings['receiver'], 'CPF inscription', $message, implode("\r\n", $headers));
+    $mailRes = mail($settings['receiver'], 'CPF inscription', $message, implode("\r\n", $headers));
     echo 'mail sent';
   }
 ?>

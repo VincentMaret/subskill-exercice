@@ -1,4 +1,4 @@
-<?php include 'home-form.php'; ?>
+<?php include 'home-form-config.php'; ?>
 
 <div class="section-contents">
   <h3>
