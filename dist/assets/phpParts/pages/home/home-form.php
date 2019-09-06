@@ -19,8 +19,8 @@ $homeFdConfig = [
     'Acceptation' => ['true']
   ],
   'formSettings' => [
-    'receiver' => 'maretvincent@protonmail.com',
-    'from' => 'test@yopmail.com'
+    'receiver' => 'receiver@gmail.com',
+    'from' => 'from@yopmail.com'
   ]
   
 ];

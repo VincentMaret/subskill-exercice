@@ -14,7 +14,7 @@
     }
 
     if($validatedFormData){
-      sendMail($validatedFormData, $formConfig['receiver']);
+      sendMail($validatedFormData, $formConfig['formSettings']);
     }
   }
 
@@ -99,18 +99,19 @@
       return $formData;
   }
   
-  function sendMail($formData, $receiver){
-    echo 'mail sent';
-    var_dump($formData);
-    echo $receiver;
-
+  function sendMail($formData, $settings){
     $message = '';
     foreach($formData as $key => $val){
-      $message .= $key.': '.$val.'\r\n';
+      if($key != 'Acceptation'){
+        $message .= $key.': '.$val.'<br>';
+      }
     }
 
-    $headers = ['From' => $from];
+    $headers[] = 'MIME-Version: 1.0';
+    $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+    $headers[] = 'From: CPF website <'.$settings['from'].'>';
+    $headers[] = 'To: CPF mail <'.$settings['receiver'].'>';
 
-    mail($receiver, 'CPF inscription', $message);
+    mail($settings['receiver'], 'CPF inscription', $message, implode("\r\n", $headers));
   }
 ?>
