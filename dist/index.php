@@ -10,6 +10,7 @@
   <meta name="description" content="...">
   <meta name="author" content="VM">
 
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
