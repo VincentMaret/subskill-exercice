@@ -1,11 +1,11 @@
 'use strict';
 
 app.common.FormManager = class {
-  constructor(FormData, errorMessages, formId, url) {
-    this.formData = FormData;
-    this.errorMessages = errorMessages;
+  constructor(formData, formId, url, callback) {
+    this.formData = formData;
     this.formId = formId;
     this.url = url;
+    this.callback = callback;
 
     this.regex = {
       name: /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/,
@@ -26,81 +26,83 @@ app.common.FormManager = class {
   }
   getFormData() {
     const formData = $(this.formId).serializeArray();
+    const t = this;
 
-    // reset Q4 array
-    this.formData.Q4 = [];
+    // reset form data arrays
+    $.each(this.formData, (i, x) => {
+      if (typeof x.val === 'object') {
+        t.formData[i].val = [];
+      }
+    });
 
     formData.forEach(x => {
-      if (x.name === 'Q4') { this.formData[x.name].push(x.value); }
-      else { this.formData[x.name] = x.value; }
+      // if values are store in object
+      if (typeof this.formData[x.name].val === 'object') {
+        this.formData[x.name].val.push(x.value);
+      }
+      else { this.formData[x.name].val = x.value; }
     });
   }
+
   checkFormData() {
     let errorChecker = false;
 
     $.each(this.formData, (i, x) => {
-
       // if no value set
-      if (x === "" || x.length === 0) {
+      if (x.val === "" || x.val.length === 0) {
         errorChecker = true;
 
         // if checkbox
-        if (i === 'Q1' || i === 'Q2' || i === 'Q3' || i === 'Q4' || i === 'Acceptation') {
+        if (x.type === 'checkbox') {
           this.setError(i, 'click');
         } else {
           this.setError(i, 'keyup');
         }
       } else {
+        if (x.type === 'text') {
+          const test = this.regex[x.regex].test(x.val);
 
-        // if name type
-        if (i === 'LastName' || i === 'FirstName') {
-          const test = this.regex.name.test(this.formData[i]);
-          // if don't match name regex or name too short
-          if (!test || this.formData[i].length < this.minNameLenth) {
+          // if don't match regex or value too short
+          if (!test || x.val.length < this.minNameLenth) {
             this.setError(i, 'keyup');
             errorChecker = true;
           }
         }
-
-        // if phone type
-        if (i === 'Phone') {
-          const test = this.regex.phone.test(this.formData[i]);
-          // if don't match phone regex
-          if (!test) {
-            this.setError(i, 'keyup');
-            errorChecker = true;
-          }
-        }
-
-        // if mail type
-        if (i === 'Mail') {
-          const test = this.regex.mail.test(this.formData[i]);
-          // if don't match mail regex
-          if (!test) {
-            this.setError(i, 'keyup');
-            errorChecker = true;
-          }
-        }
-
       }
-
     });
-
-    // refresh opened frame height
-    app.pageInstance.accordion.refreshOpenedFrame();
+    // refresh opened frame height if home page
+    if ($('body').attr('id') === 'Home') {
+      app.pageInstance.accordion.refreshOpenedFrame();
+    }
 
     return errorChecker;
   }
 
+  // check single data
+  checkInputData(e, messageIndex) {
+    const targetValue = $(e.target).val();
+    // if txt box message
+    if (e.type === 'keyup') {
+
+      const test = this.regex[this.formData[messageIndex].regex].test(targetValue);
+      // if match name regex and require length
+      if (test && targetValue.length >= this.minNameLenth) {
+        this.unsetError(messageIndex, 'keyup');
+      }
+
+    } else {
+      this.unsetError(messageIndex, 'click');
+    }
+  }
+
   setError(messageIndex, type) {
     // write message
-    $(`#${messageIndex}Container .error-message`).html(this.errorMessages[messageIndex]);
+    $(`#${messageIndex}Container .error-message`).html(this.formData[messageIndex].errorMsg);
     // set event to remove it
     $(`input[name=${messageIndex}]`).on(type, e => {
       this.checkInputData(e, messageIndex);
     });
   }
-
   unsetError(messageIndex, type) {
     // write empty message
     $(`#${messageIndex}Container .error-message`).html('');
@@ -110,48 +112,12 @@ app.common.FormManager = class {
     $(`input[name=${messageIndex}]`).off(type);
   }
 
-  checkInputData(e, messageIndex) {
-    const targetValue = $(e.target).val();
-    // if txt box message
-    if (e.type === 'keyup') {
-
-      // if name type message
-      if (messageIndex === 'LastName' || messageIndex === 'FirstName') {
-        const test = this.regex.name.test(targetValue);
-        // if match name regex and require length
-        if (test && targetValue.length >= this.minNameLenth) {
-          this.unsetError(messageIndex, 'keyup');
-        }
-      }
-
-      // if phone type message
-      if (messageIndex === 'Phone') {
-        const test = this.regex.phone.test(targetValue);
-        // if match phone regex
-        if (test) {
-          this.unsetError(messageIndex, 'keyup');
-        }
-      }
-
-      // if mail type message
-      if (messageIndex === 'Mail') {
-        const test = this.regex.mail.test(targetValue);
-        // if match mail regex
-        if (test) {
-          this.unsetError(messageIndex, 'keyup');
-        }
-      }
-
-    } else {
-      this.unsetError(messageIndex, 'click');
-    }
-  }
-
   sendData() {
     const fd = new FormData();
+    const t = this;
 
     $.each(this.formData, (i, x) => {
-      fd.append(i, x);
+      fd.append(i, x.val);
     });
 
     const options = {
@@ -162,13 +128,7 @@ app.common.FormManager = class {
     sendRes.then(res => res.text())
       .then(data => {
         console.log(data);
-        if (data === 'mail sent') {
-          $('#ThirdSlideBox .section-contents').css('display', 'none');
-          $('#Home .home-section-3 .form-answer').css('display', 'block');
-          app.pageInstance.accordion.refreshOpenedFrame();
-        } else {
-          console.log('no mail sent');
-        }
+        t.callback(data);
       });
   }
 
