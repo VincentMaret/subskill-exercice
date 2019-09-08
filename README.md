@@ -24,9 +24,9 @@ src/less/config.less
 
 # Home form settings
 
-### Path to home-form.php
+### Path to home-form-config.php
 ```
-dist/assets/phpParts/pages/home/home-form.php
+dist/assets/phpParts/pages/home/home-form-config.php
 ```
 Set home form receiver and sender here.
 
