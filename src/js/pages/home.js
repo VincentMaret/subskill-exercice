@@ -1,5 +1,3 @@
-'use strict';
-
 app.pages.Home = class {
   constructor() {
     this.formData = {
@@ -17,9 +15,7 @@ app.pages.Home = class {
   }
   init() {
     this.accordion = new app.common.Accordion(500);
-    this.formManager = new app.common.FormManager(
-      this.formData, '#HomeForm', this.url, this.mailCallback
-    );
+    this.formManager = new app.common.FormManager(this.formData, '#HomeForm', this.url, this.errorCallback);
 
     this.accordion.init();
     this.setEvents();
@@ -30,7 +26,7 @@ app.pages.Home = class {
 
     $('#HomeSubmit').on('click', e => {
       e.preventDefault();
-      t.formManager.formValidator();
+      t.formManager.validateFormAndSendMail(this.mailCallback);
     });
   }
 
@@ -42,6 +38,10 @@ app.pages.Home = class {
     } else {
       console.log('no mail sent');
     }
+  }
+
+  errorCallback() {
+    app.pageInstance.accordion.refreshOpenedFrame();
   }
 
 }

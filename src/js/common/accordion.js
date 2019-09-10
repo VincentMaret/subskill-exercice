@@ -1,10 +1,9 @@
-'use strict';
-
 app.common.Accordion = class {
   constructor(animationTime) {
     this.animationTime = animationTime;
     this.openedFrame = undefined;
     this.lastClosedFrameParentId = undefined;
+    this.isAnimated = false;
   }
 
   init() {
@@ -15,7 +14,8 @@ app.common.Accordion = class {
     $(window).on('resize', this.refreshOpenedFrame.bind(this));
   }
   accordionAnnimation(e) {
-    $('.ac-q').off('click');
+    if (this.isAnimated) { return; }
+    this.isAnimated = true;
 
     const parentId = $(e.target).parent().attr('id');
 
@@ -26,28 +26,27 @@ app.common.Accordion = class {
       //app.common.scrolling.scrollTo(parentId, 200, this.animationTime);
     }
     this.lastClosedFrameParentId = undefined;
-
-    setTimeout(this.setEvents.bind(this), this.animationTime);
   }
   openAccordion(e, parentId) {
+    const t = this;
     const askedFrame = $(`#${parentId} > .ac-a`);
     const autoHeight = $(`#${parentId} > .ac-a`).css('height', 'auto').height();
     askedFrame.css('height', '0');
     askedFrame.animate({
       height: autoHeight
-    }, this.animationTime);
+    }, this.animationTime, () => { t.isAnimated = false; });
     this.openedFrame = askedFrame;
   }
   closeAccordion() {
+    const t = this;
     this.openedFrame.animate({
       height: 0
-    }, this.animationTime);
+    }, this.animationTime, () => { t.isAnimated = false; });
     this.lastClosedFrameParentId = this.openedFrame.parent().attr('id');;
     this.openedFrame = undefined;
   }
 
   refreshOpenedFrame() {
-
     if (this.openedFrame) {
       const autoHeight = this.openedFrame.css('height', 'auto').height();
       this.openedFrame.animate({

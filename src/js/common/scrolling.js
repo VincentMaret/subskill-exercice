@@ -1,5 +1,3 @@
-'use strict';
-
 app.common.scrolling = {
   // -----------------------------------------
   setSmoothScrolling() {
