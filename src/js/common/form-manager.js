@@ -109,7 +109,6 @@ app.common.FormManager = class {
 
   sendData(mailCallback) {
     const fd = new FormData();
-    const t = this;
 
     $.each(this.formData, (i, x) => {
       fd.append(i, x.val);
