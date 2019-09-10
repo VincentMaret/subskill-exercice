@@ -450,7 +450,7 @@ html {
   display: block;
   width: 6rem;
   text-align: center;
-  home-section-1: all 0.5s;
+  transition: all 0.5s;
 }
 #Home .home-section-1 .section-part-4 div a:hover {
   transform: scale(0.98);
@@ -569,7 +569,7 @@ html {
   display: block;
   width: 6rem;
   text-align: center;
-  home-section-1: all 0.5s;
+  transition: all 0.5s;
 }
 #Home .home-section-2 .section-part.section-part-5 a:hover {
   transform: scale(0.98);
@@ -726,7 +726,7 @@ html {
   display: block;
   width: 6rem;
   text-align: center;
-  home-section-1: all 0.5s;
+  transition: all 0.5s;
 }
 #Home .home-section-3 .section-contents .acceptation input[type="submit"]:hover {
   transform: scale(0.98);
