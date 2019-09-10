@@ -4,7 +4,7 @@
 npm i
 ```
 
-# Build js an less from src folder
+# Build js and less from src folder
 
 ```
 npm run build
